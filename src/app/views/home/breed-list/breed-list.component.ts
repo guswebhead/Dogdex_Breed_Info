@@ -9,7 +9,7 @@ import { BreedService } from 'src/app/shared/service/breed.service';
 })
 export class BreedListComponent implements OnInit {
 
-
+  //variáveis que conectará os dados da api para o front-end
   breeds: Array<any> = [];
   breedsImg: Array<any> = [];
 
@@ -41,10 +41,12 @@ export class BreedListComponent implements OnInit {
     this.dogID = event.value;
   }
 
+
   pictureHandler(event:any){
     this.picNumber = event.value;
   }
 
+  //passando cada variável conectando com um unico dado especifico de uma raça de cachorro
   showDogInfo(){
     var dogFiltered=this.breeds.find( dog => dog.id === this.dogID);
 
@@ -55,13 +57,12 @@ export class BreedListComponent implements OnInit {
     this.breedGroup = dogFiltered.breed_group;
   }
 
-
+  // transferindo os dados da api de raça para a variável breeds usada no html
   listar(){
-
     this.breedService.listar().subscribe(dados => this.breeds = dados);
-
   }
 
+  //função assíncrona para dar a variavel dogImg as imagens da api
   async saveDogImg(dogImg: any){
       this.breedsImg = dogImg;
       console.log(this.breedsImg)

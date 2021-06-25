@@ -21,6 +21,8 @@ import { BreedService } from './shared/service/breed.service';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +42,7 @@ import { BreedService } from './shared/service/breed.service';
     MatBottomSheetModule,
     MatTabsModule,
     MatCardModule
+
   ],
   providers: [BreedService],
   bootstrap: [AppComponent]

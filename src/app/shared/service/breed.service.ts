@@ -1,7 +1,5 @@
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import axios from 'axios';
-import { AxiosInstance } from "axios";
 
 
 @Injectable({
@@ -9,38 +7,19 @@ import { AxiosInstance } from "axios";
 })
 export class BreedService {
 
-  apiUrl = 'https://api.TheDogAPI.com/v1/breeds';
+  apiUrl = 'https://api.TheDogAPI.com/v1/breeds'; //api com os dados dos dogs por raças
 
-  getDogimgUrl = 'https://api.theDogapi.com/v1/images/search?';
-
- /* httpOptions = {
-    headers: new HttpHeaders({
-      'x-api-key' : 's2de03501-4d8b-4a9c-880e-7ce676256d1c'
-    })
-  };
-
-  constructor(
-    private httpClient: HttpClient
-  ) { }
-
-
-  public getBreedWithFlag(flag: string): Observable<responsePageable> {
-    return this.httpClient.get<responsePageable>(this.apiUrl + '?flag' + flag);
-  } */
+  getDogimgUrl = 'https://api.theDogapi.com/v1/images/search?'; //api com múltiplas fotos da cada raça
 
 
   constructor(private http: HttpClient){}
-
+    //função para conectar o serviço da api de raça no TS
     listar(){
-
       return this.http.get<any[]>(`${this.apiUrl}`);
-
     }
 
+    //função  para conectar o serviço da api de fotos pelo id e limitando por quantidade
     imaginar(breedID: string, numberPage: string){
       return this.http.get<any[]>(`${this.getDogimgUrl}breed_id=${breedID}&limit=${numberPage}`);
     }
-
-
-
 }
