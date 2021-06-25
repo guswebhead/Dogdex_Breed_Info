@@ -46,7 +46,7 @@ export class BreedListComponent implements OnInit {
     this.picNumber = event.value;
   }
 
-  //passando cada variável conectando com um unico dado especifico de uma raça de cachorro
+  //passando cada variável conectando com um único dado especifico de uma raça de cachorro
   showDogInfo(){
     var dogFiltered=this.breeds.find( dog => dog.id === this.dogID);
 
@@ -62,7 +62,7 @@ export class BreedListComponent implements OnInit {
     this.breedService.listar().subscribe(dados => this.breeds = dados);
   }
 
-  //função assíncrona para dar a variavel dogImg as imagens da api
+  //função assíncrona para dar a variável dogImg as imagens da api
   async saveDogImg(dogImg: any){
       this.breedsImg = dogImg;
       console.log(this.breedsImg)
