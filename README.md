@@ -1,5 +1,14 @@
 # Breeddogs
 
+## COMEÇANDO
+
+-execute npm install no terminal da IDE para importal as node modules. (caso não tenha na máquina, baixe o nodeJS na página principal https://nodejs.org/en/download/)
+
+-em seguida você pode ligar o servidor de duas formas:
+    -execute npm start no terminal (essa levara ao localhost 4200)
+    -executa ng serve --port "numero da porta q deseja" -o
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 
 ## Development server
