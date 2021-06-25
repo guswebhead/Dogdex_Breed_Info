@@ -2,18 +2,15 @@
 
 ## COMEÇANDO
 
--execute npm install no terminal da IDE para importal as node modules. (caso não tenha na máquina, baixe o nodeJS na página principal https://nodejs.org/en/download/)
+-execute npm install no terminal da IDE para importar as node modules. (caso não tenha na máquina, baixe o nodeJS na página principal https://nodejs.org/en/download/)
 
 -em seguida você pode ligar o servidor de duas formas:
-    -execute npm start no terminal (essa levara ao localhost 4200)
+    -execute npm start no terminal (essa levara ao `http://localhost:4200/`)
     -executa ng serve --port "numero da porta q deseja" -o
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
