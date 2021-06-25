@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BreedService } from 'src/app/shared/service/breed.service';
-import { dogsbree } from 'src/app/shared/model/dogsbree.model';
+
 
 @Component({
   selector: 'app-breed-list',
@@ -9,8 +9,7 @@ import { dogsbree } from 'src/app/shared/model/dogsbree.model';
 })
 export class BreedListComponent implements OnInit {
 
-   // dogsbree: dogsbree[];
-    // dogsbree: dogsbree[];
+
   breeds: Array<any> = [];
   breedsImg: Array<any> = [];
 

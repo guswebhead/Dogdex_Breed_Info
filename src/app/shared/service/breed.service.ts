@@ -1,6 +1,5 @@
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { responsePageable } from '../model/responsePageable.model';
 import axios from 'axios';
 import { AxiosInstance } from "axios";
 
