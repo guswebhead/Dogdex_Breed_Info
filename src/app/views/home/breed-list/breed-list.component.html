@@ -1,0 +1,66 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Escolha">
+    <div fxLayout="column" fxLayoutAlign="center none" style="padding: 2%; width: 80%;" >
+      <div style="margin: 0.5%; width: 40%; margin-left: 40%;">
+
+        <mat-card class="example-card"
+        fxFlex="0 1 calc(33.3% - 11px)"
+        fxFlex.1t-md="0 1 calc(50% - 11px)"
+        fxFlex.2t-sm="100%"
+        >
+          <mat-card-header>
+          </mat-card-header>
+
+                 <mat-card-content>
+
+                          <h2 style="text-align:center; margin-top: 1%;">RAÇAS</h2>
+
+                          <mat-form-field appearance="fill" style="width: 60%; margin-left: 20%;" >
+                            <mat-label style="width:50%">Escolha a raça</mat-label>
+                            <mat-select (selectionChange)="selectedInfo($event)" style="width: 100%">
+                              <mat-option *ngFor="let item of breeds" [value]="item.id" style="width: 100;">
+                              {{item.name}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                          <h2 style="text-align:center;">FOTOS</h2>
+
+                          <mat-form-field appearance="fill" style="width: 60%; margin-left: 20%;">
+                            <mat-label>Quantidade</mat-label>
+                            <mat-select (selectionChange)="pictureHandler($event)" >
+                              <mat-option *ngFor="let item of pages" [value]="item"   style="width: 100;">
+                                  {{item}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                          <div style="text-align: center;">
+                          <button mat-raised-button
+                          (click)="infoDogs()"
+                          >Buscar</button>
+                          </div>
+
+                 </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </mat-tab>
+
+
+
+
+  <mat-tab label="InfoDex">
+
+  <div   style="text-align: center; margin: 2%">
+    Origin:   <b> {{origin}} </b> <br>
+    Breed Group: <b> {{breedGroup}}</b> <br>
+    Temperament: <b>{{temperament}}</b> <br>
+    Bred for: <b>{{bredFor}}</b>  <br>
+    Life span: <b>{{lifeSpan}}</b>
+</div>
+<div class="imagem" *ngFor="let item of breedsImg">
+  <img [attr.src]="item.url" style="max-inline-size: 30%;">
+ </div>
+</mat-tab>
+</mat-tab-group>
