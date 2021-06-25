@@ -31,3 +31,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## IMPORTANTE
+
+Para visualizar os dados referente a cada raça de cães:
+selecione uma raça no primeiro select seguido do número de fotos desejáveis (Algumas raças possuem poucas imagens na API, não estranhe se vir menos), 
+em seguida pressione o botão "buscar".
+As informações, juntamente com as imagens estão na tab infoDex. Basta clicar na aba referente no canto superior.
