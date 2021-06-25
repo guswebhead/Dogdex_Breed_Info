@@ -41,10 +41,6 @@ export class BreedService {
       return this.http.get<any[]>(`${this.getDogimgUrl}breed_id=${breedID}&limit=${numberPage}`);
     }
 
-    // infoDogs(name:string){
-    //   console.log("paminha")
-    //   return this.http.get<any[]>(`${this.apiUrlSearch+name}`);
-    // }
 
 
 }
